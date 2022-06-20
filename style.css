@@ -23,7 +23,9 @@
   font-size: 15px;
 }
 body{
-  background: url(./images/bg-pattern-bottom-mobile.svg);
+  background: url(./images/bg-pattern-bottom-mobile.svg), url(./images/bg-pattern-top-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: bottom, top;
 }
 .main-container {
   display: grid;
@@ -105,15 +107,16 @@ body{
     justify-content: center;
 
     height: 100vh;
-    background: url(./images/bg-pattern-bottom-desktop.svg) ;
+    background: url(./images/bg-pattern-bottom-desktop.svg), url(./images/bg-pattern-top-desktop.svg) ;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: bottom, top;
   }
   .grid-col-span-2 {
     grid-column: span 2;
   }
   .main-container {
-    max-width: 60%;
+    max-width: 50%;
+    min-width: 50%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 2rem;
@@ -137,6 +140,33 @@ body{
     margin-left: .5rem;
     margin-right: .5rem;
 
+  }
+  .rating-1{
+    position: relative;
+    left: 0;
+
+  }
+  .rating-2{
+    position: relative;
+    left: 1rem;
+
+  }
+  .rating-3{
+    position: relative;
+    left: 2rem;
+
+  }
+  .review-1{
+    position: relative;
+    top: 0;
+  }
+  .review-2{
+    position: relative;
+    top: 1rem;
+  }
+  .review-3{
+    position: relative;
+    top: 2rem;
   }
   .rating-wrapper {
     display: flex;
